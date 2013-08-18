@@ -1,0 +1,22 @@
+/Users/gabiz/Desktop/Trivia/bin/classes.dex : \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/BuildConfig.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/R$attr.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/R$drawable.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/R$layout.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/R$string.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/R$xml.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/R.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/Trivia$1.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/gabiq/trivia/Trivia.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/samsung/chord/samples/apidemo/service/ChordApiDemoService$1.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/samsung/chord/samples/apidemo/service/ChordApiDemoService$2.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/samsung/chord/samples/apidemo/service/ChordApiDemoService$3.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/samsung/chord/samples/apidemo/service/ChordApiDemoService$ChordServiceBinder.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/samsung/chord/samples/apidemo/service/ChordApiDemoService$IChordServiceListener.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/com/samsung/chord/samples/apidemo/service/ChordApiDemoService.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/org/apache/cordova/plugin/chord/ChordPlugin$1.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/org/apache/cordova/plugin/chord/ChordPlugin$2.class \
+/Users/gabiz/Desktop/Trivia/bin/classes/org/apache/cordova/plugin/chord/ChordPlugin.class \
+/Users/gabiz/Desktop/Trivia/bin/dexedLibs/chord-v1.0.0-20130327-99613643be764025c6f9be5a32ee1e05.jar \
+/Users/gabiz/Desktop/Trivia/bin/dexedLibs/cordova-3.0.0-5aee0641ab73ff40cc4dc2fb7c3d12fd.jar \
+/Users/gabiz/Desktop/Trivia/bin/dexedLibs/UHL-cb344dd0497ea53d5d7cf4cf071c6271.jar \
