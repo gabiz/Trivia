@@ -55,11 +55,16 @@ deviceReady = ->
     'DealerDeckIndexView'
     'DealerGameShowView'
     'DealerStatsShowView'
-    'PlayerGamesIndex'
+    'PlayerGamesIndexView'
     'PlayerCardView'
   ], ->
     window.app = new Router()
     Backbone.history.start()
+    if window.plugins
+      Chord = window.plugins.Chord
+      Chord.start()
+      console.log("***** Chord started")
+
 
 window.deviceReady = deviceReady
 

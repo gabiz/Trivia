@@ -92,13 +92,18 @@
     flickCard: function() {
       $('.card-swipe-area').addClass('hidden');
       $('.flip-button').removeClass('hidden');
-      return {
+      return this.cardJson = {
         'card': 'Cards-11.png'
       };
     },
     nextCard: function() {
+      var Chord;
       $('.flip-button').addClass('hidden');
-      return $('.card-swipe-area2').removeClass('hidden');
+      $('.card-swipe-area2').removeClass('hidden');
+      if (window.plugins) {
+        Chord = window.plugins.Chord;
+        return Chord.sendMessageToAll(JSON.stringify(this.cardJson));
+      }
     }
   });
 
@@ -113,11 +118,32 @@
   });
 
   window.PlayerGamesIndexView = Backbone.View.extend({
-    initialize: function() {},
+    tagName: 'div',
+    className: 'dealer-game-show',
+    events: {
+      'click .card-swipe-area': 'flickCard',
+      'click .flip-button': 'nextCard'
+    },
+    initialize: function() {
+      var Chord,
+        _this = this;
+      if (window.plugins) {
+        Chord = window.plugins.Chord;
+        Chord.onMsgReceived(function(message, onChannel, fromNode) {
+          // if (message === '{"card":"Cards-11.png"}') {
+            // this.$el.html(this.template());
+            Chord = window.plugins.Chord;
+            Chord.playHaptic(82);
+            _this.$el.html(_this.template());
+            return console.log("======================> got message " + message);
+          // }
+        });
+      }
+      return this;
+    },
     tagName: 'div',
     className: 'player-games-index',
     render: function() {
-      this.$el.html(this.template());
       return this;
     },
     events: {

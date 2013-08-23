@@ -92,11 +92,15 @@ window.DealerGameShowView = Backbone.View.extend
   flickCard: ->
     $('.card-swipe-area').addClass 'hidden'
     $('.flip-button').removeClass 'hidden'
-    'card': 'Cards-11.png'
+    @cardJson = 
+      'card': 'Cards-11.png'
 
   nextCard: ->
     $('.flip-button').addClass 'hidden'
     $('.card-swipe-area2').removeClass 'hidden'
+    if window.plugins
+      Chord = window.plugins.Chord
+      Chord.sendMessageToAll(JSON.stringify @cardJson)
 
 window.DealerStatsShowView = Backbone.View.extend
   initialize: ->
@@ -110,8 +114,29 @@ window.DealerStatsShowView = Backbone.View.extend
   	@.$el.html @.template()
   	@
 
-window.PlayerGamesIndexView = Backbone.View.extend # NEED TO MAKE TMP!!!!
-  initialize: ->
+window.PlayerGamesIndexView = Backbone.View.extend
+  # initialize: ->
+  #   console.log("======================> render")
+
+  tagName: 'div'
+  className: 'dealer-game-show'
+
+  events:
+    'click .card-swipe-area': 'flickCard'
+    'click .flip-button': 'nextCard'
+
+  render: ->
+    if window.plugins
+      Chord = window.plugins.Chord
+      Chord.onMsgReceived (message, onChannel, fromNode) =>
+        if message is '{"card":"Cards-11.png"}'
+          Chord = window.plugins.Chord
+          Chord.playHaptic(82)
+          @.$el.html @.template()
+          # $("#toShow").removeClass("hidden")
+          console.log("======================> got message #{message}")
+    # @.$el.html @.template()
+    @
 
   # function (args) {  
 #         _.bindAll(this, 'changeName');  

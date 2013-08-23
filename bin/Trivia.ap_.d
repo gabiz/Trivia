@@ -23,6 +23,7 @@
 /Users/gabiz/Desktop/Trivia/assets/www \
 /Users/gabiz/Desktop/Trivia/assets/www.orig \
 /Users/gabiz/Desktop/Trivia/assets/www.test \
+/Users/gabiz/Desktop/Trivia/assets/www/ChordPlugin.js \
 /Users/gabiz/Desktop/Trivia/assets/www/config.xml \
 /Users/gabiz/Desktop/Trivia/assets/www/cordova.js \
 /Users/gabiz/Desktop/Trivia/assets/www/cordova_plugins.js \

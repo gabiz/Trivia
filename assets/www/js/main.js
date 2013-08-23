@@ -52,9 +52,15 @@
   });
 
   deviceReady = function() {
-    return templateLoader.load(['HomePageView', 'DealerGameNewView', 'DealerDeckIndexView', 'DealerGameShowView', 'DealerStatsShowView', 'PlayerGamesIndex', 'PlayerCardView'], function() {
+    return templateLoader.load(['HomePageView', 'DealerGameNewView', 'DealerDeckIndexView', 'DealerGameShowView', 'DealerStatsShowView', 'PlayerGamesIndexView', 'PlayerCardView'], function() {
+      var Chord;
       window.app = new Router();
-      return Backbone.history.start();
+      Backbone.history.start();
+      if (window.plugins) {
+        Chord = window.plugins.Chord;
+        Chord.start();
+        return console.log("***** Chord started");
+      }
     });
   };
 
